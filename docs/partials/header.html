@@ -1,0 +1,56 @@
+<!-- PARTIAL header.html: skip link + sticky navbar, shared by every page.
+     Pages carry an @header marker with JSON {"nav": KEY}; sync-partials.py adds nav-active and aria-current="page".
+     Nav keys: home1 home2 about menu packages blog contact none.
+     Navigation is FIXED by the brief: Home dropdown (Home 1, Home 2) then About, Menu and Pricing, Family Packages, Blog, Contact.
+     Exactly ONE reservation button is visible at a time: the header one from md up, the one inside the collapse below md.
+     Both carry .btn-reserve and point to contact.html#reservation. Never add another .btn-reserve to the header.
+     The Home dropdown trigger is a real button element, so no placeholder hash link exists anywhere. -->
+<a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+<header class="site-header sticky-top" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-xl" aria-label="Primary">
+    <div class="container-xxl">
+      <a class="navbar-brand" href="index.html" aria-label="Hearth &amp; Harvest, home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3.5c3 4 5 6.2 5 9.2a5 5 0 0 1-10 0c0-2 1-3.6 2-4.6.3 1.6 1 2.6 2 3.1 0-3 .4-5.1 1-7.7z"/><path d="M5 18.5h22a11 11 0 0 1-22 0z"/><rect x="11" y="27.5" width="10" height="2" rx="1"/></svg>
+        </span>
+        <span class="brand-text">Hearth <span class="amp">&amp;</span> Harvest<small data-i18n="brand.sub">Buffet &amp; Family Restaurant</small></span>
+      </a>
+
+      <div class="header-actions order-xl-last">
+        <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">
+          <i class="bi bi-moon-stars-fill theme-icon-moon" aria-hidden="true"></i>
+          <i class="bi bi-sun-fill theme-icon-sun" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="icon-btn" data-dir-toggle aria-label="Text direction: Left-to-right (LTR). Switch to Right-to-left (RTL)">
+          <i class="bi bi-arrow-left-right" aria-hidden="true"></i><span class="dir-code" data-dir-code aria-hidden="true">LTR</span>
+        </button>
+        <a class="btn btn-primary btn-reserve d-none d-md-inline-flex ms-1" href="contact.html#reservation">
+          <i class="bi bi-calendar2-heart" aria-hidden="true"></i><span data-i18n="cta.reserve">Reserve a Table</span>
+        </a>
+        <button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Main menu" data-i18n-attr="aria-label:nav.menuToggle">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-xl-auto align-items-xl-center">
+          <li class="nav-item dropdown">
+            <button type="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><span data-i18n="nav.home">Home</span></button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><span><span class="dropdown-label" data-i18n="nav.home1">Home 1</span><small data-i18n="nav.home1.sub">Buffet &amp; family landing</small></span></a></li>
+              <li><a class="dropdown-item" href="home-2.html"><span><span class="dropdown-label" data-i18n="nav.home2">Home 2</span><small data-i18n="nav.home2.sub">Editorial, events &amp; private dining</small></span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html" data-i18n="nav.menu">Menu &amp; Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="family-packages.html" data-i18n="nav.packages">Family Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html" data-i18n="nav.blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-primary btn-reserve d-md-none w-100" href="contact.html#reservation">
+          <i class="bi bi-calendar2-heart" aria-hidden="true"></i><span data-i18n="cta.reserve">Reserve a Table</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
