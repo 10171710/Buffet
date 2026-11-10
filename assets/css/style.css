@@ -3515,7 +3515,7 @@ html[data-bs-theme="dark"] .hero-home.hero-photo {
 }
 
 .price-table th[scope="row"] {
-  text-align: start;
+  text-align: center;
 }
 
 .price-table th[scope="row"] strong {
@@ -3583,7 +3583,7 @@ html[data-bs-theme="dark"] .hero-home.hero-photo {
 
   .price-table th[scope="row"] {
     display: block;
-    text-align: start;
+    text-align: center;
     margin-bottom: .35rem;
   }
 

@@ -622,12 +622,10 @@
     <!-- GALLERY STRIP ======================================================= -->
     <section class="section" aria-labelledby="gallery-title">
       <div class="container-xxl">
-        <div class="section-head-split">
-          <div>
-            <p class="eyebrow">Inside the hearth</p>
-            <h2 id="gallery-title" class="h-section">A look <em>around</em></h2>
-          </div>
-          <a class="link-arrow" href="about.html">Read our story<i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        <div class="section-head">
+          <p class="eyebrow">Inside the hearth</p>
+          <h2 id="gallery-title" class="h-section">A look <em>around</em></h2>
+          <div class="mb-0"><a class="link-arrow" href="about.html">Read our story<i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
         </div>
         <ul class="gallery-strip">
           <li class="g-tall">
@@ -760,7 +758,7 @@
                     <label class="form-label" for="q-name">Name <span class="req" aria-hidden="true">*</span><span
                         class="visually-hidden">(required)</span></label>
                     <input class="form-control" type="text" id="q-name" name="name" required autocomplete="name"
-                      minlength="2" data-msg-missing="Tell us the name for the booking."
+                      minlength="2" placeholder="e.g. Jane Doe" data-msg-missing="Tell us the name for the booking."
                       data-msg-range="Enter at least 2 characters.">
                     <div class="invalid-feedback">Tell us the name for the booking.</div>
                   </div>
@@ -890,11 +888,11 @@
       <div class="col-sm-6 col-lg-3">
         <h2 data-i18n="foot.visit">Visit us</h2>
         <address class="mb-3">
-          <span class="ltr-num">21 Orchard Lane, Maplewood</span><br>
-          <a href="tel:+15550137788">+1 (555) 013-7788</a><br>
-          <a href="mailto:hello@hearthandharvest.example">hello@<wbr>hearthandharvest.example</a>
+          <span class="ltr-num"><i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>21 Orchard Lane, Maplewood</span><br>
+          <a href="tel:+15550137788"><i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>+1 (555) 013-7788</a><br>
+          <a href="mailto:hello@hearthandharvest.example"><i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>hello@<wbr>hearthandharvest.example</a>
         </address>
-        <p class="mb-0"><span class="text-muted d-block fs-sm" data-i18n="foot.events">Events &amp; groups</span><a href="mailto:events@hearthandharvest.example">events@<wbr>hearthandharvest.example</a></p>
+        <p class="mb-0"><span class="text-muted d-block fs-sm" data-i18n="foot.events">Events &amp; groups</span><a href="mailto:events@hearthandharvest.example"><i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>events@<wbr>hearthandharvest.example</a></p>
       </div>
       <div class="col-sm-6 col-lg-3">
         <h2 data-i18n="foot.hours">Opening hours</h2>
